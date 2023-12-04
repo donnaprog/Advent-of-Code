@@ -2,7 +2,7 @@ import numpy as np
 import re
 
 # Read as 2D ndarray
-with open('puzzle_input_day_3_example.txt') as f:
+with open('../input/puzzle_input_day_3_example.txt') as f:
     puzzle_input = [list(line)[:-1] for line in f.readlines()]
     mat = np.array(puzzle_input)
 
