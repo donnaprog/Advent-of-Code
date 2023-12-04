@@ -30,11 +30,7 @@ for card_nr in card_count.keys():
     total_nr_cards += card_count[card_nr]
     card = puzzle_input[int(card_nr) - 1]
     winning = find_number_of_winning_nrs(card)
-    if winning == 0:
-        continue
-    while card_count[card_nr] != 0:
-        for i in range(winning):
-            card_count[str(int(card_nr) + i + 1)] += 1
-        card_count[card_nr] -= 1
+    for i in range(winning):
+        card_count[str(int(card_nr) + i + 1)] += card_count[card_nr]
 
 print(total_nr_cards)
